@@ -13,6 +13,9 @@
 		38BD7C4826963771005C97C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD7C4626963771005C97C7 /* Main.storyboard */; };
 		38BD7C4A26963775005C97C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BD7C4926963775005C97C7 /* Assets.xcassets */; };
 		38BD7C4D26963775005C97C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BD7C4B26963775005C97C7 /* LaunchScreen.storyboard */; };
+		38BD7C552696398E005C97C7 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C542696398E005C97C7 /* DiscountViewController.swift */; };
+		38BD7C5C269651E1005C97C7 /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C5B269651E1005C97C7 /* DiscountCell.swift */; };
+		38BD7C5E2696553E005C97C7 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C5D2696553E005C97C7 /* Discount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		38BD7C4926963775005C97C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38BD7C4C26963775005C97C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38BD7C4E26963775005C97C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BD7C542696398E005C97C7 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
+		38BD7C5B269651E1005C97C7 /* DiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
+		38BD7C5D2696553E005C97C7 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		38BD7C3F26963771005C97C7 /* GreatDiscounts */ = {
 			isa = PBXGroup;
 			children = (
+				38BD7C5A26965168005C97C7 /* Model */,
+				38BD7C57269639B2005C97C7 /* View */,
+				38BD7C562696399F005C97C7 /* Controllers */,
 				38BD7C4026963771005C97C7 /* AppDelegate.swift */,
 				38BD7C4226963771005C97C7 /* SceneDelegate.swift */,
-				38BD7C4426963771005C97C7 /* ViewController.swift */,
-				38BD7C4626963771005C97C7 /* Main.storyboard */,
 				38BD7C4926963775005C97C7 /* Assets.xcassets */,
-				38BD7C4B26963775005C97C7 /* LaunchScreen.storyboard */,
 				38BD7C4E26963775005C97C7 /* Info.plist */,
 			);
 			path = GreatDiscounts;
+			sourceTree = "<group>";
+		};
+		38BD7C562696399F005C97C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38BD7C4426963771005C97C7 /* ViewController.swift */,
+				38BD7C542696398E005C97C7 /* DiscountViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		38BD7C57269639B2005C97C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38BD7C4626963771005C97C7 /* Main.storyboard */,
+				38BD7C4B26963775005C97C7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38BD7C5A26965168005C97C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38BD7C5B269651E1005C97C7 /* DiscountCell.swift */,
+				38BD7C5D2696553E005C97C7 /* Discount.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +172,10 @@
 			files = (
 				38BD7C4526963771005C97C7 /* ViewController.swift in Sources */,
 				38BD7C4126963771005C97C7 /* AppDelegate.swift in Sources */,
+				38BD7C5E2696553E005C97C7 /* Discount.swift in Sources */,
+				38BD7C5C269651E1005C97C7 /* DiscountCell.swift in Sources */,
 				38BD7C4326963771005C97C7 /* SceneDelegate.swift in Sources */,
+				38BD7C552696398E005C97C7 /* DiscountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529RQ8FURU;
 				INFOPLIST_FILE = GreatDiscounts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529RQ8FURU;
 				INFOPLIST_FILE = GreatDiscounts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
