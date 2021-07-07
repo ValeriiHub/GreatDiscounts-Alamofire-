@@ -59,7 +59,9 @@ class DiscountViewController: UITableViewController {
                 
                 do {
                     self.discounts = try JSONDecoder().decode([Discount].self, from: data)
-                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 } catch {
                     print(error)
                 }
