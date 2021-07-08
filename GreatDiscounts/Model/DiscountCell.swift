@@ -13,13 +13,13 @@ class DiscountCell: UITableViewCell {
     @IBOutlet var gameNameLabel: UILabel!
     @IBOutlet var discountLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var ratingLabel: UILabel!
+
     
     func configure(with discount: Discount) {
         self.gameNameLabel.text = discount.title
-        self.discountLabel.text = discount.salePrice
-        self.priceLabel.text = discount.normalPrice
-        self.ratingLabel.text = discount.steamRatingText
+        self.discountLabel.text = (discount.salePrice ?? "no price") + " $"
+        self.priceLabel.text = (discount.normalPrice ?? "no price") + " $"
+
         
         DispatchQueue.global().async {
             if let url = discount.thumb {

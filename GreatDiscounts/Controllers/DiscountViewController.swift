@@ -41,12 +41,12 @@ class DiscountViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 85
     }
 
     func fetchData() {
         
-        guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=50") else { return }
+        guard let url = URL(string: "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=100") else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             
@@ -67,5 +67,15 @@ class DiscountViewController: UITableViewController {
                 }
             }
         }.resume()                
+    }
+    
+    
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.discount = discounts[indexPath.row]
+        }
     }
 }

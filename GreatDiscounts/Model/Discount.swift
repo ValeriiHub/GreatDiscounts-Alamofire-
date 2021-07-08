@@ -13,4 +13,5 @@ struct Discount: Decodable {
     let normalPrice: String?
     let steamRatingText: String?
     let thumb: String?
+    let savings: String?
 }
