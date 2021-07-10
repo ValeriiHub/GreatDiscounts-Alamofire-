@@ -17,6 +17,8 @@
 		38BD7C5C269651E1005C97C7 /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C5B269651E1005C97C7 /* DiscountCell.swift */; };
 		38BD7C5E2696553E005C97C7 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C5D2696553E005C97C7 /* Discount.swift */; };
 		38DF836D2697062400287812 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF836C2697062400287812 /* DetailViewController.swift */; };
+		38DF83902699D44C00287812 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF838F2699D44C00287812 /* CurrencyManager.swift */; };
+		38DF83922699D9C200287812 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF83912699D9C200287812 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		38BD7C5B269651E1005C97C7 /* DiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
 		38BD7C5D2696553E005C97C7 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		38DF836C2697062400287812 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		38DF838F2699D44C00287812 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		38DF83912699D9C200287812 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		38BD7C5A26965168005C97C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				38BD7C5B269651E1005C97C7 /* DiscountCell.swift */,
 				38BD7C5D2696553E005C97C7 /* Discount.swift */,
+				38BD7C5B269651E1005C97C7 /* DiscountCell.swift */,
+				38DF83912699D9C200287812 /* Currency.swift */,
+				38DF838F2699D44C00287812 /* CurrencyManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,10 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DF83922699D9C200287812 /* Currency.swift in Sources */,
 				38BD7C4526963771005C97C7 /* ViewController.swift in Sources */,
 				38BD7C4126963771005C97C7 /* AppDelegate.swift in Sources */,
 				38BD7C5E2696553E005C97C7 /* Discount.swift in Sources */,
 				38BD7C5C269651E1005C97C7 /* DiscountCell.swift in Sources */,
+				38DF83902699D44C00287812 /* CurrencyManager.swift in Sources */,
 				38BD7C4326963771005C97C7 /* SceneDelegate.swift in Sources */,
 				38BD7C552696398E005C97C7 /* DiscountViewController.swift in Sources */,
 				38DF836D2697062400287812 /* DetailViewController.swift in Sources */,

@@ -8,10 +8,11 @@
 import Foundation
 
 struct Discount: Decodable {
-    let title: String?
-    let salePrice: String?
-    let normalPrice: String?
-    let steamRatingText: String?
-    let thumb: String?
-    let savings: String?
+    var title: String?
+    var salePrice: String?
+    var normalPrice: String?
+    var steamRatingText: String?
+    var thumb: String?
+    var savings: String?
 }
+
