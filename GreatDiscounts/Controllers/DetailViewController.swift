@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     
     let currency = CurrencyManager()
     
-    var discount = Discount()
+    var discount = Discount(dictDiscount: [:])
     
     
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
     @IBAction func converteChanged(_ sender: UISegmentedControl) {
         let currencyName = sender.titleForSegment(at: sender.selectedSegmentIndex)
         currency.getCurrency(currencyName: currencyName!)
-    
+        
     }
     
     func fetchImage(){
@@ -57,12 +57,10 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: DetailViewControllerDelegate {
     
-    func didUpdateVC(currency: Currency, currencyName: String) {
+    func didUpdateVC(currency: [String : Double], currencyName: String) {
         DispatchQueue.main.async {
-            let price = (currency.conversionRates?[currencyName] ?? 0) * Double(self.discount.salePrice ?? "0")!
+            let price = (currency[currencyName] ?? 0) * Double(self.discount.salePrice ?? "0")!
             self.convertedLabel.text = String(format: "%.2f", price)
         }
     }
-    
-    
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387D0E90269B5F8900E5A4E1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 387D0E8F269B5F8900E5A4E1 /* Podfile */; };
 		38BD7C4126963771005C97C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C4026963771005C97C7 /* AppDelegate.swift */; };
 		38BD7C4326963771005C97C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C4226963771005C97C7 /* SceneDelegate.swift */; };
 		38BD7C4526963771005C97C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C4426963771005C97C7 /* ViewController.swift */; };
@@ -19,9 +20,11 @@
 		38DF836D2697062400287812 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF836C2697062400287812 /* DetailViewController.swift */; };
 		38DF83902699D44C00287812 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF838F2699D44C00287812 /* CurrencyManager.swift */; };
 		38DF83922699D9C200287812 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF83912699D9C200287812 /* Currency.swift */; };
+		8AF4AC36A842513DC601B88C /* Pods_GreatDiscounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E90A30A7F4D8BDD50F98DB9 /* Pods_GreatDiscounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		387D0E8F269B5F8900E5A4E1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		38BD7C3D26963771005C97C7 /* GreatDiscounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreatDiscounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BD7C4026963771005C97C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BD7C4226963771005C97C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		38DF836C2697062400287812 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		38DF838F2699D44C00287812 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		38DF83912699D9C200287812 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		5E90A30A7F4D8BDD50F98DB9 /* Pods_GreatDiscounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreatDiscounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A584898AA7080481337540 /* Pods-GreatDiscounts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreatDiscounts.debug.xcconfig"; path = "Target Support Files/Pods-GreatDiscounts/Pods-GreatDiscounts.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE2A4D8CE8BE9E95307B86E /* Pods-GreatDiscounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreatDiscounts.release.xcconfig"; path = "Target Support Files/Pods-GreatDiscounts/Pods-GreatDiscounts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF4AC36A842513DC601B88C /* Pods_GreatDiscounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08D55BC8B287DB56EAE4FF23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A584898AA7080481337540 /* Pods-GreatDiscounts.debug.xcconfig */,
+				FDE2A4D8CE8BE9E95307B86E /* Pods-GreatDiscounts.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		38BD7C3426963771005C97C7 = {
 			isa = PBXGroup;
 			children = (
+				387D0E8F269B5F8900E5A4E1 /* Podfile */,
 				38BD7C3F26963771005C97C7 /* GreatDiscounts */,
 				38BD7C3E26963771005C97C7 /* Products */,
+				08D55BC8B287DB56EAE4FF23 /* Pods */,
+				61262553E6F8B072EB4D5381 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +128,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		61262553E6F8B072EB4D5381 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E90A30A7F4D8BDD50F98DB9 /* Pods_GreatDiscounts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38BD7C5126963775005C97C7 /* Build configuration list for PBXNativeTarget "GreatDiscounts" */;
 			buildPhases = (
+				B68AF50AD3CF4043A04E50C9 /* [CP] Check Pods Manifest.lock */,
 				38BD7C3926963771005C97C7 /* Sources */,
 				38BD7C3A26963771005C97C7 /* Frameworks */,
 				38BD7C3B26963771005C97C7 /* Resources */,
+				2A6B66EDA6D7D6C6E0B40D6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,11 +197,54 @@
 			files = (
 				38BD7C4D26963775005C97C7 /* LaunchScreen.storyboard in Resources */,
 				38BD7C4A26963775005C97C7 /* Assets.xcassets in Resources */,
+				387D0E90269B5F8900E5A4E1 /* Podfile in Resources */,
 				38BD7C4826963771005C97C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A6B66EDA6D7D6C6E0B40D6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreatDiscounts/Pods-GreatDiscounts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreatDiscounts/Pods-GreatDiscounts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreatDiscounts/Pods-GreatDiscounts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B68AF50AD3CF4043A04E50C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreatDiscounts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38BD7C3926963771005C97C7 /* Sources */ = {
@@ -331,6 +403,7 @@
 		};
 		38BD7C5226963775005C97C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A584898AA7080481337540 /* Pods-GreatDiscounts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -351,6 +424,7 @@
 		};
 		38BD7C5326963775005C97C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE2A4D8CE8BE9E95307B86E /* Pods-GreatDiscounts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

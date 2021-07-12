@@ -20,7 +20,6 @@ class DiscountCell: UITableViewCell {
         self.discountLabel.text = (discount.salePrice ?? "no price") + " $"
         self.priceLabel.text = (discount.normalPrice ?? "no price") + " $"
 
-        
         DispatchQueue.global().async {
             if let url = discount.thumb {
                 guard let imageURL = URL(string: url) else { return }

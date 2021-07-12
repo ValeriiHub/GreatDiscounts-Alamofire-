@@ -14,5 +14,14 @@ struct Discount: Decodable {
     var steamRatingText: String?
     var thumb: String?
     var savings: String?
+    
+    init(dictDiscount: [String : Any]) {
+        title = dictDiscount["title"] as? String
+        salePrice = dictDiscount["salePrice"] as? String
+        normalPrice = dictDiscount["normalPrice"] as? String
+        steamRatingText = dictDiscount["steamRatingText"] as? String
+        thumb = dictDiscount["thumb"] as? String
+        savings = dictDiscount["savings"] as? String
+    }
 }
 

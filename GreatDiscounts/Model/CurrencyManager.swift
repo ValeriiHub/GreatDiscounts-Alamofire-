@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol DetailViewControllerDelegate {
-    func didUpdateVC(currency: Currency, currencyName: String)
+    func didUpdateVC(currency: [String : Double], currencyName: String)
 }
 
 class CurrencyManager {
@@ -18,21 +19,20 @@ class CurrencyManager {
     func getCurrency(currencyName: String) {
         guard let url = URL(string: "https://v6.exchangerate-api.com/v6/\(key)/latest/USD") else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            if let data = data {
-                do {
-                    let currency = try JSONDecoder().decode(Currency.self, from: data)
-                    self.delegate?.didUpdateVC(currency: currency, currencyName: currencyName)
-                } catch {
-                    print(error)
+        AF.request(url).validate().responseJSON { dataResonse in
+            switch dataResonse.result {
+            case .success(let value):
+                
+                guard let jsonData = value as? [String : Any] else { return }
+                
+                if let dictionary = jsonData["conversion_rates"] as? [String: Double] {
+                    self.delegate?.didUpdateVC(currency: dictionary, currencyName: currencyName)
                 }
+
+                
+            case .failure(let error):
+                print(error)
             }
-        }.resume()
+        }
     }
 }
