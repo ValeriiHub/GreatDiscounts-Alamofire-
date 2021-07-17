@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet var gameImage: UIImageView!
+    @IBOutlet var gameImage: ImageView!
     @IBOutlet var gamesNameLabel: UILabel!
     @IBOutlet var discountLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
         currency.delegate = self
         
         super.viewDidLoad()
-        fetchImage()
+        gameImage.fetchImage(with: discount.thumb)
         gamesNameLabel.text = discount.title
         discountLabel.text = (discount.salePrice ?? "0") + " $"
         priceLabel.text = (discount.normalPrice ?? "0") + " $"
@@ -40,18 +40,6 @@ class DetailViewController: UIViewController {
         let currencyName = sender.titleForSegment(at: sender.selectedSegmentIndex)
         currency.getCurrency(currencyName: currencyName!)
     
-    }
-    
-    func fetchImage(){
-        if let url = discount.thumb {
-            guard let imageURL = URL(string: url) else { return }
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-            DispatchQueue.main.async {
-                self.gameImage.image = UIImage(data: imageData)
-            }
-        } else {
-            print("ERROR URL!!!")
-        }
     }
 }
 

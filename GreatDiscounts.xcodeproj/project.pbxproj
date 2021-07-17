@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3870914B26A3024400E76C91 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870914A26A3024400E76C91 /* ImageView.swift */; };
 		38BD7C4126963771005C97C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C4026963771005C97C7 /* AppDelegate.swift */; };
 		38BD7C4326963771005C97C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C4226963771005C97C7 /* SceneDelegate.swift */; };
 		38BD7C4526963771005C97C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD7C4426963771005C97C7 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3870914A26A3024400E76C91 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		38BD7C3D26963771005C97C7 /* GreatDiscounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreatDiscounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BD7C4026963771005C97C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BD7C4226963771005C97C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				38BD7C5B269651E1005C97C7 /* DiscountCell.swift */,
 				38DF83912699D9C200287812 /* Currency.swift */,
 				38DF838F2699D44C00287812 /* CurrencyManager.swift */,
+				3870914A26A3024400E76C91 /* ImageView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3870914B26A3024400E76C91 /* ImageView.swift in Sources */,
 				38DF83922699D9C200287812 /* Currency.swift in Sources */,
 				38BD7C4526963771005C97C7 /* ViewController.swift in Sources */,
 				38BD7C4126963771005C97C7 /* AppDelegate.swift in Sources */,
